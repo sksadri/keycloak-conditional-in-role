@@ -23,8 +23,8 @@ public class ConditionalRoleAuthenticator implements ConditionalAuthenticator {
                 logger.errorv("Invalid role name submitted: {0}", skipRole);
                 return false;
             }
-            logger.warn("is user in role: " + role.getName());
-            logger.warn("result: " + user.hasRole(role));
+            logger.warn("is user (" + user.getUsername() + ") in role: " + role.getName() + " = " + user.hasRole(role));
+            logger.warn("gauth must apply: " + !user.hasRole(role));
             return !user.hasRole(role);
         }
         logger.warn("User or authConfig is null return false");
