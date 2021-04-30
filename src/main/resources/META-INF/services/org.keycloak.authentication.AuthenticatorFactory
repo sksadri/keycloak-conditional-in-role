@@ -1,1 +1,1 @@
-tn.sks.keycloak.authenticator.conditional.ConditionalRoleAuthenticatorFactory
+tn.sks.keycloak.authenticator.conditional.ConditionalInRoleAuthenticatorFactory
