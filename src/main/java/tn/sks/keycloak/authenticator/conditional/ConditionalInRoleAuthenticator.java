@@ -24,7 +24,7 @@ public class ConditionalInRoleAuthenticator implements ConditionalAuthenticator 
                 return false;
             }
             logger.warn("is user (" + user.getUsername() + ") in role: " + role.getName() + " = " + user.hasRole(role));
-            logger.warn("gauth must apply: " + user.hasRole(role));
+            logger.warn("next rule must apply: " + user.hasRole(role));
             return user.hasRole(role);
         }
         logger.warn("User or authConfig is null return false");
